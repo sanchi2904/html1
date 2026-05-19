@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    nav {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      font-size: 18px;
+      text-decoration: none;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: #00d2ff;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">🏠 Home</a>
+    <a href="#">📄 Projects</a>
+    <a href="#">📞 Contact</a>
+  </nav>
+</body>
+</html>
+

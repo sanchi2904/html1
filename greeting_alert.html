@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Greeting</title>
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI';
+      flex-direction: column;
+    }
+    button {
+      background: #03dac6;
+      color: black;
+      padding: 10px 25px;
+      border: none;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click below to get a greeting ✨</h1>
+  <button onclick="showGreeting()">Greet Me</button>
+
+  <script>
+    function showGreeting() {
+      const hour = new Date().getHours();
+      let greeting = '';
+      if (hour < 12) greeting = '🌞 Good Morning!';
+      else if (hour < 18) greeting = '🌤️ Good Afternoon!';
+      else greeting = '🌙 Good Evening!';
+      alert(greeting);
+    }
+  </script>
+</body>
+</html>
